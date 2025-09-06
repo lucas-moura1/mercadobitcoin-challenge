@@ -14,7 +14,7 @@ A minimal matching engine and trading API in Go. It exposes endpoints to create 
 - `repository/`: data access interfaces and implementations
 - `usecase/`: core business logic (order creation, matching, trade execution)
 - `handler/`: HTTP handlers
-- `cmd/<app>` or root `main.go`: application entrypoint
+- `cmd/main.go`: application entrypoint
 - `Tests`: table-driven, with gomock-based repository/use case mocks
 
 
@@ -41,7 +41,6 @@ docker compose up -d
 
 2) Apply schema.sql (pick one)
 
-Example (adjust to your compose):
 ```
 docker compose exec -T db psql -U postgres -d clob_db < ./scripts/schema.sql
 ```
